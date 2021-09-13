@@ -1,0 +1,16 @@
+<div align="center" class="center">
+  <section class="example-section">
+    <mat-slide-toggle
+      class="example-margin"
+      (change)="onChangeGameType($event.source.checked)">
+      <ng-container *ngIf="gameType; then People else Starship"></ng-container>
+      <ng-template #People>People</ng-template>
+      <ng-template #Starship>Starship</ng-template>
+    </mat-slide-toggle>
+  </section>
+
+  <app-card [player]="firstPlayer"></app-card>
+  <app-card [player]="secondPlayer"></app-card>
+
+  <button (click)="randomizeCharacker(gameType)">Start!</button>
+</div>

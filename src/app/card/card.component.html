@@ -1,0 +1,14 @@
+<mat-card class="example-card"
+          [ngStyle]="winner ?  {'border': 'green solid 10px;'} : {'border' : 'red solid 10px;'}">
+  <mat-card-header>
+    <mat-card-title>
+      Nazwa: {{player.fighter.name}}
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    Ilość punktów: {{player.fighter.mass || player.fighter.crew}}
+  </mat-card-content>
+  <mat-card-actions>
+   Punkty: {{player.counterWons}}
+  </mat-card-actions>
+</mat-card>
